@@ -1,0 +1,45 @@
+body{
+  margin: 30px;
+  text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1490093158370-1a6be674437b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1516&q=80);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Dosis', sans-serif;
+}
+
+input{
+  text-align: center;
+  padding: 10px;
+}
+
+h1{
+  font-size: 50px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+h2{
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+p{
+  font-size: 25px;
+}
+
+#title-box{
+  background-color: rgba(78, 79, 82, 0.5);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px black;
+}
+
+#bot-box{
+  background-color: rgba(78, 79, 82, 0.5);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px black;
+}
