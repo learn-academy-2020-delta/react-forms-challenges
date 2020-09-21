@@ -6,7 +6,7 @@ class DalekRobot extends Component{
       <>
       <div>
       <h4>The Dalek</h4>
-        <p>You said "{ this.props.dalekRobotSays }" did you mean: </p>
+        <p>You said "{ this.props.dalekRobotSays }" did you mean: Exterminate! </p>
       </div>
       </>
     )

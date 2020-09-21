@@ -10,13 +10,18 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      userInput: ""
+      userInput: "",
+      badRobotReturn: "Blah Blah"
     }
   }
 
   handleChange = (e) => {
     console.log(e.target.value)
     this.setState({ userInput: e.target.value })
+  }
+
+  randomizer = () => {
+    this.setState({ userInput: this.badRobotReturn })
   }
 
   render(){
@@ -34,6 +39,7 @@ class App extends Component{
       />
       <BadRobot
           badRobotSays={ this.state.userInput }
+          onChange={ this.state.badRobotReturn }
       />
       <DalekRobot
           dalekRobotSays={ this.state.userInput }

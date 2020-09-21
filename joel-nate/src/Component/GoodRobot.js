@@ -6,7 +6,7 @@ class GoodRobot extends Component{
       <>
       <div>
       <h4>Good Robot</h4>
-        <p>Hello { this.props.goodRobotSays }</p>
+        <p>You are saying: { this.props.goodRobotSays }</p>
       </div>
       </>
     )
