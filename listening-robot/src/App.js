@@ -2,36 +2,42 @@ import React, { Component } from 'react'
 import GoodRobot from './components/GoodRobot'
 import BadRobot from './components/BadRobot'
 import RevBot from './components/RevBot'
+import './App.css'
 
 class App extends Component {
-  cnstructor(props) {
+  constructor(props) {
     super(props)
     this.state = {
-      userName: ""
+      userInput: "",
+      badRobotOutput: "",
+      reverseRobotOutPut: ""
     }
   }
 
   handleChange = (e) => {
     // console.log(e.target) // where an event took place
-    console.log(e.target.value) // what is the value at that target location
-    this.setState({ userName: e.target.value }) // put the value in userName
+    // console.log(e.target.value) // what is the value at that target location
+    this.setState({ userInput: e.target.value }) // put the value in userName
   }
 
   render(){
-    console.log(this.state.userName) // check the value of userName here as it evolves
+    console.log(this.state.userInput) // check the value of userName here as it evolves
     return(
       <>
         <h1>Robo Active Listening</h1>
+        <h2>Say Something:</h2>
         <input
           type="text"
-          value={ this.state.userName }
-          onchange={ this.handleChange } // listens to the DOM and reacts when anything changes
+          value={ this.state.userInput }
+          onChange={ this.handleChange } // listens to the DOM and reacts when anything changes
         />
-        // <input type="checkbox"/>
-        // <input type="password"/>
-        <p>
-          Hello, { this.state.userName } // output to the HTML page
-        </p>
+        <h3 className = "robot-header">Good Robot:</h3>
+          <GoodRobot value={ this.state.userInput } />
+        <h3 className = "robot-header">Bad Robot:</h3>
+          <BadRobot value={ this.state.userInput } />
+        <h3 className = "robot-header">Reverse Robot:</h3>
+          <RevBot value={ this.state.userInput } />
+
       </>
     )
   }

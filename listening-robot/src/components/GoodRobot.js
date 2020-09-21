@@ -5,7 +5,7 @@ class GoodRobot extends Component {
     render() {
 
         return (
-            <h3>I'm Good robot</h3>
+            <h4>{`I hear you saying "${ this.props.value }". Is that correct?`}</h4>
         )
     }
 }
