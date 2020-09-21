@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 
 class BadRobot extends Component {
-badChange = (string) => {
-    let badRob = ""
-    for(let index = 0; index < string.length; index++){
-        badRob += "BLA";
+    badChange = (string) => {
+        let badRob = ""
+        for (let index = 0; index < string.length; index++) {
+            badRob += "BLA";
+        }
+        return badRob
     }
-    return badRob
-}
-    render(){
-        return(
+    render() {
+        return (
             <>
-            <div id="badRob">
-                <h3>Bad Robot Says</h3>
-                <p>{this.badChange(this.props.badRobot)}</p>
-            </div>
+                <div id="badRob">
+                    <h3>Bad Robot Says</h3>
+                    <p>{this.badChange(this.props.badRobot)}</p>
+                </div>
             </>
         )
     }

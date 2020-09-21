@@ -1,45 +1,33 @@
-import React, { Component } from 'react';
-import './App.css';
-import GoodRobot from './components/GoodRobot';
-import BadRobot from './components/BadRobot';
-import KanyeBot from './components/KanyeBot';
+import React, { Component } from "react";
+import "./App.css";
+import GoodRobot from "./components/GoodRobot";
+import BadRobot from "./components/BadRobot";
+import KanyeBot from "./components/KanyeBot";
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      userInput: ""
-    }
+      userInput: "",
+    };
   }
-handleChange = (e) => {
-  this.setState({ userInput: e.target.value,  })
-}
+  handleChange = (e) => {
+    this.setState({ userInput: e.target.value });
+  };
 
   render() {
     return (
       <>
-        <div>
+        <div id="everything">
           <h1> Listening Robot </h1>
           <input
-          type="text"
-          value={this.state.userInput}
-          onChange={this.handleChange}
+            type="text"
+            value={this.state.userInput}
+            onChange={this.handleChange}
           />
-        </div>
-        <div>
-          <GoodRobot 
-          goodRobot = {this.state.userInput}
-          />
-        </div>
-        <div>
-          <BadRobot
-          badRobot = {this.state.userInput}
-          />
-        </div>
-        <div>
-          <KanyeBot 
-          kanyeBot = {this.state.userInput}
-          />
+          <GoodRobot goodRobot={this.state.userInput} />
+          <BadRobot badRobot={this.state.userInput} />
+          <KanyeBot kanyeBot={this.state.userInput} />
         </div>
       </>
     );
