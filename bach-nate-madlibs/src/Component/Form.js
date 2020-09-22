@@ -36,7 +36,7 @@ class Form extends Component{
       <React.Fragment>
         <h3>Please enter the following information:</h3>
         <form>
-          <label>Noun:</label>
+          <label>Noun: </label>
           <input
             name="noun"
             type="text"
@@ -45,7 +45,7 @@ class Form extends Component{
           />
           <br />
           <br />
-          <label>Adjective:</label>
+          <label>Adjective: </label>
           <input
             name="adjective"
             type="text"
@@ -54,7 +54,7 @@ class Form extends Component{
           />
           <br />
           <br />
-          <label>Verb:</label>
+          <label>Verb: </label>
           <input
             name="verb"
             type="text"
@@ -63,7 +63,7 @@ class Form extends Component{
           />
           <br />
           <br />
-          <label>Adverb:</label>
+          <label>Adverb: </label>
           <input
             name="adverb"
             type="text"
@@ -72,7 +72,7 @@ class Form extends Component{
           />
           <br />
           <br />
-          <label>Pronoun:</label>
+          <label>Pronoun: </label>
           <input
             name="pronoun"
             type="text"
@@ -82,11 +82,13 @@ class Form extends Component{
           <br />
           <br />
           <input
+            id="submitButton"
             type="submit"
             value="Create Madlib!"
             onClick={ this.handleSubmit }
           />
           <input
+            id="clearButton"
             type="submit"
             value="Clear!"
             onClick={ this.handleReset }
