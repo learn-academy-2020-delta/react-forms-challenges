@@ -1,0 +1,53 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    /*text-align: left;*/
+    justify-content: left;
+}
+
+#madlib{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#adjective{
+    display: flex;
+    justify-content: left;
+    margin-left: 25%;
+}
+
+#noun{
+    display: flex;
+    justify-content: left;
+    margin-left: 25%
+}
+
+#animal{
+    display: flex;
+    justify-content: left;
+    margin-left: 25%
+
+}
+
+#noise{
+    display: flex;
+    justify-content: left;
+    margin-left: 25%
+
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
