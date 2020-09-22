@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import MadLibsForm from './Components/MadLibsForm';
+import MadLibsParagraph from './Components/MadLibsParagraph';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+        form: null
+    }
+  }
+
+  handleFormSubmit = (newForm) => {
+    this.setState({ form: newForm })
+  }
+
+  render() {
+    return (
+      <>
+        <h1>2020 News Generator</h1>
+        <MadLibsForm 
+          handleFormSubmit = { this.handleFormSubmit }
+        />
+        { this.state.form && 
+          <MadLibsParagraph form= { this.state.form }/>
+        }
+      </>
+    );
+  }
 }
 
-export default App;
